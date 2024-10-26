@@ -153,7 +153,7 @@ public class MyArrayList<E> implements Ilist<E> {
         @SuppressWarnings("unchecked")
         E victim = (E) elements[index];
         System.arraycopy(elements, index + 1, elements, index, --size - index);
-        elements[size] = null; // Убираем ссылку на удаленный элемент
+        elements[size] = null; 
         return victim;
     }
 
@@ -162,7 +162,7 @@ public class MyArrayList<E> implements Ilist<E> {
         checkIndex(index);
         @SuppressWarnings("unchecked")
         E victim = (E) elements[index];
-        elements[index] = element; // Исправлено: присваиваем элемент
+        elements[index] = element; 
         return victim;
     }
 }
